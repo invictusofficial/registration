@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Status</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      background-size: 400% 400%;
+      animation: bgMove 12s ease infinite;
+      color: #fff;
+    }
+
+    .screen {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 9vw, 7.5rem);
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+
+      background: linear-gradient(
+        90deg,
+        #ff0057,
+        #ff8a00,
+        #00c6ff,
+        #ff0057
+      );
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      text-shadow:
+        0 0 12px rgba(255, 0, 87, 0.35),
+        0 0 28px rgba(255, 0, 87, 0.25);
+
+      animation:
+        textMove 4s linear infinite,
+        pulse 2.8s ease-in-out infinite;
+    }
+
+    @keyframes bgMove {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes textMove {
+      to { background-position: 300% center; }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.035);
+        opacity: 0.9;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="screen">
+    <h1>FANTOM NE HOST NNHI KIYA ABHI TAK</h1>
+  </div>
+
+</body>
+</html>
